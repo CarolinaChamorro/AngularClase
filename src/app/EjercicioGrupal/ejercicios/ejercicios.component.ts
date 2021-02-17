@@ -22,6 +22,7 @@ this.valor=getRandom(11,1)
     this.choose=drp.target.value;
   }
  
-  
+  //Plural
+  value:number = 0;
 
 }

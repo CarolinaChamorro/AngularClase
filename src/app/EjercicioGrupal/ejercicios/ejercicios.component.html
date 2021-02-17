@@ -19,4 +19,9 @@
 
 </div>
 <br>
-
+<h2>Uso de NgPlural</h2>
+<div [ngPlural]="value">
+  <ng-template ngPluralCase="=0">No hay mensajes</ng-template>
+  <ng-template ngPluralCase="=1">Un mensaje</ng-template>
+  <ng-template ngPluralCase="other">{{ value }} mensajes</ng-template>
+</div>
