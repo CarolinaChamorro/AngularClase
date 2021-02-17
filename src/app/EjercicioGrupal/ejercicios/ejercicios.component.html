@@ -1,0 +1,22 @@
+<h2>Uso de NgIf</h2>
+<h3>Nota:{{valor}}</h3>
+<p *ngIf="valor>=7">has aprobado</p>
+<input type="button" value="Actualizar nota" onclick="location.reload()">
+<br>
+<h2>Uso de NgSwitch</h2>
+<select (change)="setvalue($event)">
+  <option value="">--seleccionar--</option>
+  <option value="rojo">rojo</option>
+  <option value="verde">verde</option>
+  <option value="azul">azul</option>
+  <option value="otro">otro</option>
+</select>
+<div [ngSwitch]="choose">
+  <h3 *ngSwitchCase="'rojo'">Ha elegido el color rojo</h3>
+  <h3 *ngSwitchCase="'verde'">Ha elegido el color verde</h3>
+  <h3 *ngSwitchCase="'azul'">Ha elegido el color azul</h3>
+  <h3 *ngSwitchCase="'otro'">Ha elegido un color diferente</h3>
+
+</div>
+<br>
+
