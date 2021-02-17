@@ -1,0 +1,13 @@
+<p>listado works!</p>
+<!-- <ul>
+    <li>{{listado[0]}}</li>
+    <li>{{listado[1]}}</li>
+    <li>{{listado[2]}}</li>
+    <li>{{listado[3]}}</li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let lista of listado; let i = index">
+        {{i+1}} - {{lista}}
+    </li>
+</ul>
