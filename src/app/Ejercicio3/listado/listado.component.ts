@@ -7,5 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent {
 listado: string[]=['Ing.Maritza','Carlos','Juan','Vilma','Andres']
+listaElementoBorrado='';
+borrarElemento(){
+  this.listaElementoBorrado=this.listado.shift() || '';
+  
+}
 
 }

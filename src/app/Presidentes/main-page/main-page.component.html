@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col">
+
+        <h3>Candidatos a la presidencia</h3>
+        <hr>
+        <ul>
+          <app-lista-candidatos [candidatos]="candidatos"></app-lista-candidatos>
+        </ul>
+    </div>
+    <div class="col">
+        <h2>Agregar puntuación</h2>
+        <hr>
+        <form (ngSubmit)="agregar()">
+            <input type="text" name="nombre" [(ngModel)]="nuevo.nombre" placeholder="Nombre">
+            <input type="text"  name="apellido" [(ngModel)]="nuevo.apellido" placeholder="Apellido">
+            <input type="text" name="puntaje" [(ngModel)]="nuevo.puntaje" placeholder="Puntaje">
+            <button type="submit">Enviar</button>
+        </form>
+       
+    </div>
+</div>

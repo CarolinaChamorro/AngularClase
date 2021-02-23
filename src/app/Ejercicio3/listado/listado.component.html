@@ -6,6 +6,17 @@
     <li>{{listado[3]}}</li>
 </ul> -->
 
+<div *ngIf="listaElementoBorrado; else noBorrado">
+    <h2>El elemento que se borró es: </h2>
+    <small>{{listaElementoBorrado}}</small>
+</div>
+<!-- <div *ngIf="!listaElementoBorrado">
+    <h2>no se ha borrado nada </h2>
+</div> -->
+<ng-template #noBorrado>
+<h2>No se ha borrado nada!</h2>
+</ng-template>
+<button (click)="borrarElemento()">Borrar</button>
 <ul>
     <li *ngFor="let lista of listado; let i = index">
         {{i+1}} - {{lista}}
